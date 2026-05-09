@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.log
+vendor/
+node_modules/
+.idea/
+.vscode/
+.git/
+# Ignore any system-specific files from the main project if they leak here

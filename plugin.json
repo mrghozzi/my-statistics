@@ -1,0 +1,12 @@
+{
+    "name": "MyStatistics",
+    "slug": "my-statistics",
+    "version": "1.0.0",
+    "author": "MrGhozzi",
+    "description": "Cookie-less tracking and analytics for MYADS, fully compliant with GDPR, CCPA, and DNT.",
+    "thumbnail": "thumbnail.png",
+    "siteweb": "https://github.com/mrghozzi",
+    "latest": "https://github.com/mrghozzi/my-statistics/releases/latest",
+    "ADStn_url": "my-statistics",
+    "min_myads": "4.3.0"
+}

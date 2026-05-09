@@ -1,0 +1,16 @@
+# MyStatistics Changelogs
+
+All notable changes to this plugin will be documented in this file.
+
+## [1.0.0] - 2026-05-09
+### Added
+- Initial release of the MyStatistics plugin.
+- Cookie-less tracking implementation.
+- Daily salted IP-hashing system to ensure GDPR and CCPA privacy compliance.
+- Do Not Track (DNT) header support to respect user privacy.
+- Async JavaScript tracking script injection to bypass ad-blockers via custom beacon endpoint.
+- Detailed admin dashboard mirroring WP Statistics UI structure.
+- Traffic trend line chart using Chart.js.
+- Widgets for Top Pages, Top Browsers, OS, Devices, and Top Referring Domains.
+- Country geolocation tracking using Cloudflare headers or PHP extensions.
+- Multi-language support (English and Arabic).
