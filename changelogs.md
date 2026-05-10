@@ -2,6 +2,12 @@
 
 All notable changes to this plugin will be documented in this file.
 
+## [1.1.0] - 2026-05-10
+### Added
+- IP address tracking for each visit (optional/administrative view).
+- Full pagination for the "Latest Visitors" section in the admin dashboard.
+- Real-time display of visitor IP address next to country flags.
+
 ## [1.0.0] - 2026-05-09
 ### Added
 - Initial release of the MyStatistics plugin.

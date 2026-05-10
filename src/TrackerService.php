@@ -170,6 +170,7 @@ class TrackerService
         // Save to Database
         DB::table('my_statistics_hits')->insert([
             'visitor_hash' => $visitorHash,
+            'ip' => $request->ip(),
             'url' => $url ? substr($url, 0, 2048) : null,
             'title' => $title ? substr($title, 0, 255) : null,
             'referrer' => $referrer ? substr($referrer, 0, 2048) : null,

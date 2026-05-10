@@ -249,6 +249,9 @@
                                     @if($v->country !== 'XX')
                                         <img src="https://flagcdn.com/16x12/{{ strtolower($v->country) }}.png" alt="{{ $v->country }}" title="{{ $v->country }}" class="rounded-1">
                                     @endif
+                                    @if($v->ip)
+                                        <small class="text-muted fw-bold">{{ $v->ip }}</small>
+                                    @endif
                                 </div>
                             </td>
                         </tr>
@@ -258,6 +261,11 @@
                     </tbody>
                 </table>
             </div>
+            @if($latestVisitors->hasPages())
+            <div class="admin-panel__footer border-top p-3 d-flex justify-content-center">
+                {{ $latestVisitors->links() }}
+            </div>
+            @endif
         </div>
     </section>
 </div>

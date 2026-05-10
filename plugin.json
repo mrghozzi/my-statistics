@@ -1,7 +1,7 @@
 {
     "name": "MyStatistics",
     "slug": "my-statistics",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": "MrGhozzi",
     "description": "Cookie-less tracking and analytics for MYADS, fully compliant with GDPR, CCPA, and DNT.",
     "thumbnail": "thumbnail.png",

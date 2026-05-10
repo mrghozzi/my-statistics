@@ -107,8 +107,7 @@ class AdminStatisticsController extends Controller
         // Latest Visitors
         $latestVisitors = DB::table('my_statistics_hits')
             ->orderBy('created_at', 'DESC')
-            ->limit(10)
-            ->get();
+            ->paginate(20);
 
         // Top Referring Domains
         $topReferrers = DB::table('my_statistics_hits')
