@@ -12,4 +12,6 @@ Route::middleware(['web'])->group(function () {
 Route::middleware(['web', 'auth', 'admin'])->group(function () {
     // Admin Dashboard
     Route::get('/admin/my-statistics', [AdminStatisticsController::class, 'index'])->name('admin.my_statistics.index');
+    Route::get('/admin/my-statistics/settings', [AdminStatisticsController::class, 'settings'])->name('admin.my_statistics.settings');
+    Route::post('/admin/my-statistics/settings', [AdminStatisticsController::class, 'updateSettings'])->name('admin.my_statistics.settings.update');
 });

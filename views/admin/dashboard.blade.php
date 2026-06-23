@@ -15,6 +15,11 @@
             <h1 class="admin-hero__title">{{ __('my_statistics::messages.dashboard_title') }}</h1>
             <p class="admin-hero__copy">{{ __('my_statistics::messages.dashboard_desc') }}</p>
         </div>
+        <div class="admin-hero__actions">
+            <a href="{{ route('admin.my_statistics.settings') }}" class="btn btn-primary">
+                <i class="feather-settings me-2"></i> {{ __('my_statistics::messages.settings') }}
+            </a>
+        </div>
     </section>
 
     <div class="row g-3 mt-1">

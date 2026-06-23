@@ -100,6 +100,20 @@ class TrackerService
             return;
         }
 
+        // Apply Sampling Rate (reduce server load)
+        $samplingRate = (int) (\App\Models\Option::where('name', 'my_statistics_sampling_rate')->value('o_valuer') ?? 100);
+        if ($samplingRate < 100 && rand(1, 100) > $samplingRate) {
+            return;
+        }
+
+        // Apply Data Retention (save database space) with a 5% chance to run garbage collection
+        $retentionDays = (int) (\App\Models\Option::where('name', 'my_statistics_retention_days')->value('o_valuer') ?? 0);
+        if ($retentionDays > 0 && rand(1, 100) <= 5) {
+            DB::table('my_statistics_hits')
+                ->where('created_at', '<', now()->subDays($retentionDays))
+                ->delete();
+        }
+
         $visitorHash = $this->generateVisitorHash($request);
         $url = $request->input('url', $request->header('referer'));
         $title = $request->input('title');

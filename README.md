@@ -14,6 +14,9 @@
     - Search engine referrers and incoming domains.
     - Device, operating system, and browser usage statistics.
     - Global geographic tracking (Top Countries).
+- **Performance Settings**:
+    - **Sampling Rate**: Track a percentage of visitors to reduce server load on high-traffic sites.
+    - **Data Retention**: Automatically clear old statistics after a specified number of days to save database space.
 
 ## 🛠️ Installation
 

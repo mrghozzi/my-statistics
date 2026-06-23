@@ -131,4 +131,32 @@ class AdminStatisticsController extends Controller
             'searchEngines', 'latestVisitors', 'topReferrers'
         ));
     }
+
+    public function settings()
+    {
+        $samplingRate = \App\Models\Option::where('name', 'my_statistics_sampling_rate')->value('o_valuer') ?? 100;
+        $retentionDays = \App\Models\Option::where('name', 'my_statistics_retention_days')->value('o_valuer') ?? 0;
+
+        return view('my_statistics::admin.settings', compact('samplingRate', 'retentionDays'));
+    }
+
+    public function updateSettings(Request $request)
+    {
+        $request->validate([
+            'sampling_rate' => 'required|integer|min:1|max:100',
+            'retention_days' => 'required|integer|min:0',
+        ]);
+
+        \App\Models\Option::updateOrCreate(
+            ['name' => 'my_statistics_sampling_rate'],
+            ['o_valuer' => $request->sampling_rate]
+        );
+
+        \App\Models\Option::updateOrCreate(
+            ['name' => 'my_statistics_retention_days'],
+            ['o_valuer' => $request->retention_days]
+        );
+
+        return redirect()->route('admin.my_statistics.settings')->with('success', __('my_statistics::messages.settings_updated'));
+    }
 }

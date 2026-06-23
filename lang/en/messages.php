@@ -36,4 +36,11 @@ return [
     'no_visitors' => 'No visitors logged yet.',
     'page_views' => 'Page Views',
     'unique_visitors' => 'Unique Visitors',
+    'settings' => 'Settings',
+    'sampling_rate' => 'Sampling Rate (%)',
+    'sampling_rate_desc' => 'Percentage of requests to track (1-100). Lower this to reduce server load.',
+    'retention_days' => 'Data Retention (Days)',
+    'retention_days_desc' => 'Number of days to keep analytics data before deleting it (0 to keep forever). Lower this to save database space.',
+    'settings_updated' => 'Settings updated successfully.',
+    'save_changes' => 'Save Changes',
 ];
